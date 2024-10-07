@@ -25,7 +25,7 @@ func GetPackageManagerType(osRelease string) (pkgmgr.PackageManagerType, error) 
 		return pkgmgr.PackageManagerApt, nil
 	case "rhel", "ol", "rocky", "centos", "fedora", "amzn":
 		return pkgmgr.PackageManagerYum, nil
-	case "arch":
+	case "arch", "archarm":
 		return pkgmgr.PackageManagerPacman, nil
 	default:
 		return pkgmgr.PackageManagerUnknown, fmt.Errorf("operating system (%s) is not supported", osRelease)
